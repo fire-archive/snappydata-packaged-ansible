@@ -4,11 +4,11 @@ After=network.target
 
 [Service]
 Type=oneshot
-ExecStart=/opt/snappydata/src/build-artifacts/scala-2.10/snappy/sbin/snappy-start-all.sh
-ExecStop=/opt/snappydata/src/build-artifacts/scala-2.10/snappy/sbin/snappy-stop-all.sh
+ExecStart=/opt/snappydata/snappydata-0.5-bin/sbin/snappy-start-all.sh
+ExecStop=/opt/snappydata/snappydata-0.5-bin/sbin/snappy-stop-all.sh
 User=snappydata
 Group=snappydata
-WorkingDirectory=/opt/snappydata/src/build-artifacts/scala-2.10/snappy
+WorkingDirectory=/opt/snappydata/
 RemainAfterExit=yes
 
 [Install]

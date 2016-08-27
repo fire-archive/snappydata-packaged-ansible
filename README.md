@@ -6,14 +6,17 @@ SnappyData is a **distributed in-memory data store for real-time operational ana
 
 ## How to install
 
-This was tested on Windows 10
+This was tested on Ubuntu 16.04. We are using libvirt because of performance differences on virtualbox.
 
 Install:
 
 * __Install Vagrant 1.8.4+__ https://www.vagrantup.com/downloads.html
-* Install VirtualBox https://www.virtualbox.org/wiki/Downloads
-* `vagrant plugin install vagrant-vbguest`
-* `vagrant up`
+* `sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils`
+* `sudo apt-get install virt-manager`
+* `vagrant plugin install vagrant-libvirt`
+* `vagrant up --provider=libvirt`
+* Password: vagrant
+* Can also put `export VAGRANT_DEFAULT_PROVIDER=libvirt` in profile.
 * `vagrant provision`
 
 Point your sql client to `snappydata.192.168.55.4.nip.io`.
