@@ -21,6 +21,15 @@ Install:
 
 Point your sql client to `snappydata.192.168.55.4.nip.io`.
 
+## How to install via ansible
+
+
+* `sudo add-apt-repository ppa:ansible/ansible`
+* `sudo apt-get update`
+* `sudo apt install ansible`
+* Go to the location of the `playbook.yml`;
+* `ansible-playbook playbook.yml -i x.x.x.x, -u centos -b --become-user root`
+
 ## Notes
 
 The YCSB SnappyStore driver hard codes the hostname. Patches are accepted to fix this.
